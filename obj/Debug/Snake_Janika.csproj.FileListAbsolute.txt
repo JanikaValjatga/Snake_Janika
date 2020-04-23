@@ -1,0 +1,7 @@
+C:\Users\Lenovo\Desktop\Snake\bin\Debug\Snake-game.exe.config
+C:\Users\Lenovo\Desktop\Snake\bin\Debug\Snake-game.exe
+C:\Users\Lenovo\Desktop\Snake\bin\Debug\Snake-game.pdb
+C:\Users\Lenovo\Desktop\Snake\obj\Debug\Snake_Janika.csprojAssemblyReference.cache
+C:\Users\Lenovo\Desktop\Snake\obj\Debug\Snake_Janika.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\Snake\obj\Debug\Snake-game.exe
+C:\Users\Lenovo\Desktop\Snake\obj\Debug\Snake-game.pdb
