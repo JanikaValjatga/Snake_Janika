@@ -18,7 +18,7 @@ namespace Snake_Janika
             var mainMusic = new MediaPlayer();
             string url = @"C:\Users\Lenovo\Desktop\Snake\Music\Fon.mp3";
             mainMusic.Open(new Uri(url, UriKind.Relative));
-            mainMusic.Volume = 15;
+            mainMusic.Volume = 50;
             mainMusic.Play();
         }
 

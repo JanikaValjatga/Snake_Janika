@@ -17,18 +17,18 @@ namespace Snake
 			Sounds music = new Sounds();
 			music.MainMusic();
 
-			Walls walls = new Walls(100, 25);
+			Walls walls = new Walls(120, 25);
 			walls.Draw();
 		
 			Point p = new Point(4, 5, '*');
 			Snake snake = new Snake(p, 4, Direction.RIGHT);
 			snake.Draw();
 
-			FoodCreator foodCreator = new FoodCreator(100, 25, '$');
+			FoodCreator foodCreator = new FoodCreator(120, 25, '$');
 			Point food = foodCreator.CreateFood();
 			food.Draw();
 
-			int xOffsetO4ki = 40;
+			int xOffsetO4ki = 50;
 			int yOffsetO4ki = 26;
 
 			int o4ki = 0;
@@ -63,21 +63,29 @@ namespace Snake
 				}
 			}
 			music.GameOver();
-			WriteGameOver();
+			WriteGameOver(o4ki);
 			Console.ReadLine();
 		}
 
-		static void WriteGameOver()
+		static void WriteGameOver(int x)
 		{
-			int xOffset = 40;
-			int yOffset = 8;
+			int xOffset = 25;
+			int yOffset = 9;
 			Console.ForegroundColor = ConsoleColor.Red;
 			Console.SetCursorPosition(xOffset, yOffset++);
 			WriteText("============================", xOffset, yOffset++);
 			WriteText("И Г Р А    О К О Н Ч Е Н А", xOffset + 1, yOffset++);
 			yOffset++;
-			WriteText("Введите свое имя:", xOffset + 2, yOffset++);
+			WriteText("Введите своё имя:", xOffset + 2, yOffset++);
 			yOffset++;
+			StreamReader from_file = new StreamReader(@"C:\Users\Lenovo\Desktop\Snake\Users.txt", true);
+			for (int i = 0; i <= 5; i++)
+			{
+				string text = from_file.ReadToEnd();
+				Console.WriteLine(text);
+				yOffset++;
+			}
+			from_file.Close();
 			WriteText("Автор: Janika Valjataga", xOffset + 2, yOffset++);
 			WriteText("Группа: TARpv19", xOffset + 2, yOffset++);
 			WriteText("============================", xOffset, yOffset++);
@@ -86,7 +94,7 @@ namespace Snake
 			string NameU = Console.ReadLine();
 
 			Save saveFiles = new Save();
-			saveFiles.to_file(NameU);
+			saveFiles.to_file(NameU, x);
 		}
 
 		static void WriteText(String text, int xOffset, int yOffset)
