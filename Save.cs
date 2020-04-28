@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Snake_game
+namespace Snake_Janika
 {
     class Save
     {
@@ -16,7 +16,7 @@ namespace Snake_game
         public void to_file(string x,int y)
         {
             StreamWriter to_file = new StreamWriter(@"C:\Users\Lenovo\Desktop\Snake\Users.txt", true);
-            to_file.WriteLine(x,y);
+            to_file.WriteLine("Имя:" + x + "  Очки: " + y);
             to_file.Close();
         }
 
